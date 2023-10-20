@@ -1,0 +1,3 @@
+// The program input for simple_merkle_tree/src/main.leo
+[main]
+a: field = 1field;
