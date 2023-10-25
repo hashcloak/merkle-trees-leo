@@ -3,7 +3,7 @@
 This repository shows three different implementations for Merkle trees in the [Leo programming language](https://developer.aleo.org/leo). This repository arises as an exercise to learn the language basics.
 
 Here, you will find the following implementations:
-- `simple_merkle_tree`: this is an implementation of a verifier for Merkle proofs. This implementation uses the `feat/array` branch of the Leo programming language repo.
+- `simple_merkle_tree`: implementation of a Merkle tree with 16 leaves and the verifier of Merkle proofs for such trees. Also contains a function to generate testvalues to pass to the verifier, see details in `simple_merkle_tree/README.md`. This implementation uses the `feat/array` branch of the Leo programming language repo.
 - `small_merkle_tree`: this is an implementation of a Merkle tree construction and also implements the verification of Merkle proofs for trees with a finite number of leaves. 
 - `tiny_merkle_tree`: This is an implementation of a Merkle tree construction for threes with a finite number of leaves. It generates the Merkle proof, and allow the verification of a Merkle proof. This implementation uses the `feat/array` branch of the Leo programming language repo.
 

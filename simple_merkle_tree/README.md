@@ -1,4 +1,10 @@
-# simple_merkle_tree.aleo
+# Simple Merkle Tree in Leo
+
+This is a simple implementation of a Merkle tree with 16 leaves in Leo and the verification of a Merkle proof of such tree. 
+
+With this implementation you can verify a Merkle proof and generate testvalues to do so. Specifically there are the following functions (transitions) to call:
+- `verify_merkle_proof`, this will verify the Merkle proof for a leaf and corresponding leaf index
+- `get_test_values`, this will allow you to generate a Merkle proof to test the previous function with. It requires the 16 leaves of the tree and the leaf index
 
 ## Build Guide
 
@@ -14,9 +20,9 @@ leo execute main
 
 ## Test
 
-### Example 1
+### Full example 1
 
-Obtain Merkle proof for leaves
+First, obtain the Merkle proof for leaf with index 0:
 ```bash
 leo run get_test_values "[3field, 6field, 1field, 9field, 10field, 4field, 12field, 7field,11field, 18field, 2field, 14field, 16field, 5field, 21field, 8field]" 0u8
 
@@ -46,7 +52,7 @@ leo run verify_merkle_proof 3field 0u8 "[795786937640242745841439142782799439357
   # true - Merkle proof verified
 ```
 
-Example of what should output false: (change leaf index)
+Example of what should output false: (wrong leaf index)
 ```bash
 leo run verify_merkle_proof 3field 1u8 "[7957869376402427458414391427827994393570004362503155705352209248862077308098field,
   2480189107576283157302673498822341376328169812325058987418755627238677989670field,
